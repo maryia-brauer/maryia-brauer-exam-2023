@@ -29,7 +29,7 @@ export const useAuthStore = defineStore('auth', {
             if (email === 'admin@test.com' && password === '123456') {
                 localStorage.is_authenticated = true;
                 this.authenticated = true;
-                router.push('/');
+                router.push("/");
             }
         },
         logout() {
