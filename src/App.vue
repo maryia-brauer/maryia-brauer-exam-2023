@@ -1,5 +1,3 @@
-import { useAuthStore } from '@/stores/auth.js'
-
 <template>
     <Header v-if="is_authenticated"></Header>
     <div id="section-body">
@@ -12,6 +10,9 @@ import { useAuthStore } from '@/stores/auth.js'
 </template>
 
 <script>
+import { useAuthStore } from '@/stores/auth.js'
+import NavigationComponent from '@/components/NavigationComponent.vue' 
+
 export default {
     setup() {
         const auth = useAuthStore()
@@ -19,7 +20,7 @@ export default {
     },
     components: {
         NavigationComponent,
-        AudioPlayer
+
     }
 }
 

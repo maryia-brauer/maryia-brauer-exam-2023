@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import router from '@/router/index.js'
 
 export const useAuthStore = defineStore('auth', {
     state: () => ({
@@ -12,7 +13,7 @@ export const useAuthStore = defineStore('auth', {
     }),
     getters: {
         is_authenticated() {
-            return localStorage.is_authenticated ?? this.authenticated;
+            return localStorage.is_authenticated === 'true' ?? this.authenticated;
         },
         getFavoriteSongs() {
             return this.user.favorite_songs;
