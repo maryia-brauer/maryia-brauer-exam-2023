@@ -1,0 +1,5 @@
+<template>
+    <div>
+      <h1>Songs</h1>
+    </div>
+  </template>
